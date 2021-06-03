@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserDetail">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/avatar"
+        android:layout_width="139dp"
+        android:layout_height="139dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:paddingBottom="30dp"
+        app:civ_border_color="@color/black"
+        app:civ_border_width="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_Username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal"
+        android:text="@string/name_user"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/avatar" />
+
+
+    <TextView
+        android:id="@+id/txt_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:padding="2dp"
+        android:text="@string/name"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_Username" />
+
+    <TextView
+        android:id="@+id/lokasi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="@string/location"
+        android:textSize="12sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/perusahaan" />
+
+    <TextView
+        android:id="@+id/perusahaan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:gravity="center_horizontal"
+        android:text="@string/company"
+        android:textSize="12sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_name" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:gravity="center_horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lokasi">
+
+        <TextView
+            android:id="@+id/follower"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:text="@string/followers"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/txt_follower"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_toEndOf="@id/follower"
+            android:ellipsize="end"
+            android:text="@string/follower"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/following"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="26dp"
+            android:layout_toEndOf="@id/txt_follower"
+            android:ellipsize="end"
+            android:text="@string/followings"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txt_following"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_toEndOf="@id/following"
+            android:ellipsize="end"
+            android:text="@string/following"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/repository"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="26dp"
+            android:layout_toEndOf="@id/txt_following"
+            android:ellipsize="end"
+            android:text="@string/repositories"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txt_repository"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_toEndOf="@id/repository"
+            android:ellipsize="end"
+            android:text="@string/repository"
+            android:textColor="@color/black" />
+
+
+    </RelativeLayout>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@color/secondary_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout"
+
+        app:tabTextColor="@android:color/darker_gray" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/view_pager"
+        android:layout_width="411dp"
+        android:layout_height="377dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tabs" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fav_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="67dp"
+        app:backgroundTint="#FF86AF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="ContentDescription" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

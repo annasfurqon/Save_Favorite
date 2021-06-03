@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">MyGithub</string>
+    <string name="name_user">Username</string>
+    <string name="name">nama</string>
+    <string name="follower">100</string>
+    <string name="repository">100</string>
+    <string name="following">100</string>
+    <string name="company">company</string>
+    <string name="location">location</string>
+    <string name="followers">Followers </string>
+    <string name="repositories">Repository </string>
+    <string name="followings">following</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="menu_1">favorite</string>
+    <string name="menu_2">setting</string>
+    <string name="reminder">Reminder</string>
+    <string name="set_reminder">Set Reminder at 09:00 AM</string>
+    <!-- Preference Titles -->
+    <string name="messages_header">Atur Pengingat</string>
+    <!--alarm -->
+    <string name="content_title">Hello !</string>
+    <string name="content_text">canda hello</string>
+</resources>

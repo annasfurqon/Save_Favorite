@@ -1,0 +1,17 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:iconSpaceReserved="false">
+
+    <PreferenceCategory app:title="@string/messages_header">
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="@string/reminder"
+            app:icon="@drawable/ic_baseline_notifications_active_24"
+            android:title="@string/set_reminder"
+            app:iconSpaceReserved="false"/>
+
+    </PreferenceCategory>
+
+
+</PreferenceScreen>
